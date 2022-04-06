@@ -56,6 +56,7 @@ export const Profile =()=>{
         margin='0 auto'
         flexWrap="wrap"
         bgcolor={theme.palette.background.paper}
+        color={theme.palette.text.primary}
    >
 
         <div id="#topos"

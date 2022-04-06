@@ -17,7 +17,7 @@ import {
   useTheme,
 } from "@mui/material";
 
-import { useNavigate, NavLink} from "react-router-dom";
+import { useNavigate, NavLink, Link} from "react-router-dom";
 
 import { useAppThemeContext } from "../contexts/ThemeContext";
 
@@ -32,7 +32,9 @@ export const AppBarTopo = () => {
 
   const navegate = useNavigate();
   
-  
+  const nave =(to)=>{
+    navegate(to)
+  }
   
  
 
@@ -137,29 +139,27 @@ export const AppBarTopo = () => {
               </Box>
 
               <Box
-                bgcolor="blueviolet"
+                bgcolor='transparent'
+                color={theme.palette.background.paper}
                 justifyContent="center"
                 display="flex"
                 width="100%"
                 alignItems="center"
               >
-                <ListItemButton
-                  onClick={() => selectedClick("/home")}
-                 
-                >
-                  <Home sx={{ marginRight: 1 }} />
+                <NavLink 
+                 exact to='/home' activeClassName='selected'>
 
-                  <ListItemText primary="Home" />
-                </ListItemButton>
-
-                <ListItemButton
-                  onClick={() => selectedClick("/profile")}
                 
-                >
-                  <AccountCircle sx={{ marginRight: 1 }} />
+                  <Icon  sx={{ marginRight: 0, fontSize:35}}>home</Icon>
+                  <label>Home</label>
+                </NavLink>
 
-                  <ListItemText primary="Profile" />
-                </ListItemButton>
+                <NavLink to='/profile'>
+                  <AccountCircle sx={{ marginRight: 0, fontSize:35 }} />
+                  <label>Profile</label>
+          
+                  </NavLink>
+                
               </Box>
             </Box>
           </Drawer>
