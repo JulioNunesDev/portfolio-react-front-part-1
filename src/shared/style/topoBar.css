@@ -1,0 +1,40 @@
+
+a{
+    text-decoration: none;
+    font-family: var(--font-sora);
+    font-size: 20px;
+   
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    color:  rgb(115, 0, 255);
+    transition: background .2s ease-in;
+    border-radius: 3px;
+    
+}
+
+a label{
+    cursor: pointer;
+}
+a:hover{
+    cursor: pointer;
+    background-color: rgb(84, 4, 181);
+    color: #ffffff;
+
+}
+
+
+
+
+
+.active{
+    color:  rgb(255, 255, 255);
+    background-color: rgb(115, 0, 255);
+    border-radius: 3px;
+
+}
+
+.active:hover{
+ 
+}

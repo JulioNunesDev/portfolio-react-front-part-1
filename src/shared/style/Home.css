@@ -1,0 +1,325 @@
+@import url('./home-sobre.css');
+
+.Home-container{
+  
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 10px;
+    align-items: center;
+}
+
+
+
+.Home-titulo{
+width: 480px;
+height: 490px;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center; 
+flex-wrap: wrap;
+
+
+}
+
+ /* div */ .titulo-h1{
+    
+    height: auto;
+    padding: 10px;
+    width: 85%;
+    padding: 5px;
+
+   
+   
+}
+
+.titulo-h1 h1{
+    font-size: 63px;
+    font-family: var(--font-bebas);
+
+   
+}
+
+.titulo-button{
+
+    width: 85%;
+    height: auto;
+    display: flex;
+    justify-content: left;
+    padding: 10px;
+    flex-wrap: wrap;
+   
+}
+
+.titulo-button button{
+    width: 150px;
+    height:50px;
+    border: 0;
+    transition: 0.3s ease-in-out;
+    font-family: var(--font-sora);
+    border-radius:  30px 10%;
+    outline: none;
+    font-weight: bold;
+    font-size: 22px;
+    background-image: linear-gradient(80deg, var(--colortext),var(--colortext2) );
+    
+    color: var(--colorbutton);
+   
+}
+.titulo-button button:hover{
+    width: 150px;
+    height:50px;
+    border: 0;
+    border-radius: 10% 30px;
+    color: #D9D9D9;
+    background-image: linear-gradient(80deg, var(--colortext),var(--colortext2) );
+    box-shadow: 2px 2px 15px var(--colortext2);
+}
+
+.Home-fotos{
+    width: 500px;
+    height: 500px;
+  box-shadow: 1px 2px 7px rgba(0, 0, 00, 0.5);
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+
+}
+
+
+.Home-fotos:hover{
+    
+  box-shadow: 1px 6px 25px rgba(0, 0, 00, 0.7);
+   
+}
+
+
+.button-down{
+ 
+    z-index: 100;
+    width: auto;
+    height: auto;
+    bottom: 50%;
+    left: 50%;  
+    display: flex;
+   flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    animation: seta .9s infinite ;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.button-down h5{
+    font-family: var(--font-sora);
+    animation: seta .5s infinite ;
+}
+.button-down a{
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+}
+.button-down a:hover{
+   
+  background-color: transparent;
+
+}
+
+
+
+@keyframes seta{
+    
+    0%{bottom:25px}
+    100%{ bottom: 20px}
+
+    
+}
+
+@media not screen and  (min-width: 1024px ) {
+
+    .Home-container{
+        
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    
+    .Home-fotos{
+        display: flex;
+        width: 300px;
+        height: 360px;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+  
+    }
+
+
+
+
+    .Home-titulo{
+        width: 300px;
+        height: 500px;
+     
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center; 
+        flex-wrap: wrap;
+        }
+        
+         /* div */ .titulo-h1{
+            padding: 10px;
+           
+            width: 100%;
+          
+           
+        }
+        
+        .titulo-h1 h1{
+            font-size: 45px;
+           
+        }
+        
+        .titulo-button{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: left;
+            padding: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .titulo-button button{
+            width: 120px;
+            height:50px;
+            border: 0;
+            transition: 0.3s ease-in-out;
+            border-radius: 10% 30px;
+            outline: none;
+            font-weight: bold;
+            font-size: 19px;
+           
+        }
+
+   
+    
+}
+
+
+
+@media not screen and  (min-width: 441px )  and (min-width: 637px )
+  and (min-width: 337px ) {
+
+    .Home-container{
+  
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+       
+    }
+    
+    
+    .Home-fotos{
+        display: flex;
+        width: 100%;
+        height: 500px;
+        padding: 15px;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        align-items: center;
+  
+    }
+
+
+
+
+    .Home-titulo{
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.749);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center; 
+        flex-wrap: wrap;
+        }
+        
+         /* div */ .titulo-h1{
+            padding: 10px;
+           height: auto;
+           
+            width: 100%;
+            text-align: center;
+          
+           
+        }
+        
+        .titulo-h1 h1{
+            color: #fafafa;
+            font-size: 45px;
+           
+        }
+        
+        .titulo-button{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .titulo-button button{
+            width: 120px;
+            height:50px;
+            border: 0;
+            transition: 0.3s ease-in-out;
+            border-radius: 10% 30px;
+            outline: none;
+            font-weight: bold;
+            font-size: 19px;
+           
+           
+        }
+
+       
+        
+        
+        @keyframes seta{
+            
+            0%{bottom:25px}
+            100%{ bottom: 20px}
+        
+            
+        }
+        
+
+   
+    
+}
+
+
+

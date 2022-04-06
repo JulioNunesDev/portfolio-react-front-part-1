@@ -1,0 +1,746 @@
+@import url("./Home.css");
+
+.sobre-home {
+  background-image: linear-gradient(
+      6590deg,
+      rgb(0, 0, 0),
+      rgba(0, 0, 0, 0.821),
+      rgba(17, 28, 236, 0)
+    ),
+    url("../../assets/imgs/wallwar.jpg");
+  background-color: #0d0d0d;
+  filter: brightness(1);
+  height: 900px;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+  padding: 25px;
+}
+
+.sobre-contained {
+  width: 700px;
+  height: auto;
+}
+
+.sobre-contained h1 {
+  color: rgb(115, 0, 255);
+  font-family: var(--font-bebas);
+}
+
+.sobre-contained p {
+  color: #ccc;
+  font-size: 17px;
+  font-family: var(--font-fira);
+}
+
+.contained-titles {
+  width: 100%;
+  height: 50%;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.contained-titles div {
+  padding: 10px;
+  width: 50%;
+  border: 1px solid #565656;
+  height: auto;
+}
+
+.contained-titles-down {
+  width: 700px;
+  height: 400px;
+}
+
+.contained-titles-down div {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #575757;
+  height: 50%;
+  border-bottom-right-radius: 25px;
+}
+
+.opinions {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+}
+
+.opinions-titles {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 55px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 500px;
+  height: 100%;
+}
+
+.opinions-titles h4 {
+  font-family: var(--font-bebas);
+}
+
+.opinions-titles h1 {
+  font-family: var(--font-bebas);
+  font-size: 75px;
+}
+
+.title-opinions {
+  width: 90%;
+}
+
+.title-opinions p {
+  font-size: 16px;
+  font-family: var(--font-fira);
+}
+
+.button-opinions {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.button-opinions button {
+  background-image: linear-gradient(80deg, var(--colortext), var(--colortext2));
+  height: 45px;
+  width: 65%;
+  color: #fafafa;
+  font-family: var(--font-sora);
+  border-radius: 58px;
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+.button-opinions button:hover {
+  background-image: linear-gradient(80deg, var(--colortext), var(--colortext2));
+  box-shadow: 2px 3px 20px var(--colortext2);
+}
+
+.opinions-texts {
+  flex: 2;
+
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+  align-items: flex-end;
+}
+
+.opinions-texts-person:nth-child(2) {
+  margin-right: 225px;
+}
+
+.opinions-texts-person {
+  width: 350px;
+  height: auto;
+  background-color: #282727;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.opinions-img {
+  width: 100%;
+  display: flex;
+  height: 30%;
+  align-items: center;
+}
+
+.opinions-img-img {
+  width: 20%;
+  margin-right: 15px;
+  border-radius: 50%;
+  padding: 0px 10px 10px 0;
+  background-color: var(--colortext);
+}
+
+.opinions-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.opinions-img-titles h4 {
+  line-height: 2px;
+  font-size: 20px;
+  text-indent: 3px;
+  font-family: var(--font-fira);
+  color: #ccc;
+}
+.opinions-img-titles h1 {
+  font-size: 29px;
+  font-family: var(--font-bebas);
+  color: var(--colortext);
+}
+
+.opinions-body-person {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 10px;
+}
+
+
+
+.opinions-body-person-modal{
+  position: relative;
+
+  width: 100%;
+ 
+}
+.opinions-body-person-modal p{
+  cursor: pointer;
+  width: auto;
+ color: var(--colortext);
+ font-family: var(--font-fira);
+}
+.opinions-body-person-modal p:hover{
+  text-decoration: underline;
+}
+.opinions-body-person-modal-links{
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 250px;
+  width: 250px;
+  border-radius: 8px;
+  position: absolute;
+  z-index: 20;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  background-image: linear-gradient(50deg, var(--colortext),rgba(120, 38, 220, 0.932) );
+  
+}
+.opinions-body-person-modal-links a {
+    color: black;
+}
+
+.opinions-body-person p {
+  color: #ccc;
+  font-size: 17px;
+  text-align: left;
+  text-justify: inter-ideograph;
+  font-family: var(--font-fira);
+}
+
+.title-opinions-date {
+  color: rgb(173, 173, 173);
+  width: 100%;
+  height: auto;
+  font-family: var(--font-fira);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+ 
+  height: auto;
+  width: 100%;
+  flex-direction: column;
+ 
+ 
+}
+
+
+
+@keyframes setaUp {
+  0% {
+    transform: scale(1.1);
+  }
+}
+
+.footer-name {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
+
+}
+
+
+
+.topo {
+  display: flex;
+  justify-content: center;
+height:auto;
+width: 100%;
+
+}
+
+.topo a{
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: var(--font-sora);
+}
+.topo a:hover{
+  background: transparent;
+}
+
+.baixo{
+  
+  height: auto;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.baixo div{
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+ 
+}
+
+.footer-name h2 {
+  font-size: 22px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media not screen and (min-width: 1024px) {
+  .opinions {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #0d0d0d;
+  }
+
+  .opinions-titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .opinions-titles h4 {
+    font-family: var(--font-bebas);
+    color: #fafafa;
+  }
+
+  .opinions-titles h1 {
+    font-family: var(--font-bebas);
+    font-size: 75px;
+    color: #fafafa;
+    text-align: left;
+  }
+
+  .title-opinions {
+    width: 90%;
+  }
+
+  .title-opinions p {
+    font-size: 16px;
+    color: #fafafa;
+    text-align: left;
+  }
+
+  .button-opinions {
+    width: 90%;
+    text-align: left;
+  }
+  .button-opinions button {
+    background-image: linear-gradient(
+      80deg,
+      var(--colortext),
+      var(--colortext2)
+    );
+    height: 45px;
+    width: 65%;
+    color: #fafafa;
+    font-family: var(--font-noto);
+    border-radius: 58px;
+    border: none;
+    transition: 0.3s ease-in-out;
+  }
+  .button-opinions button:hover {
+    background-image: linear-gradient(
+      80deg,
+      var(--colortext),
+      var(--colortext2)
+    );
+    box-shadow: 2px 3px 20px var(--colortext2);
+    color: #fafafa;
+    font-family: var(--font-noto);
+  }
+
+  .opinions-texts {
+    flex: 1;
+
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    align-items: flex-end;
+  }
+
+  .opinions-texts-person:nth-child(2) {
+    margin-right: 0px;
+  }
+
+  .opinions-texts-person {
+    width: 350px;
+    height: auto;
+    background-color: #282727;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+
+  .opinions-img {
+    width: 100%;
+    display: flex;
+    height: 30%;
+    align-items: center;
+  }
+
+  .opinions-img-img {
+    width: 20%;
+    margin-right: 15px;
+    border-radius: 50%;
+    padding: 0px 10px 10px 0;
+    background-color: #ff1b1b;
+  }
+
+  .opinions-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .opinions-img-titles h4 {
+    line-height: 2px;
+    font-size: 20px;
+    text-indent: 3px;
+    font-family: var(--font-fira);
+    color: #ccc;
+  }
+  .opinions-img-titles h1 {
+    font-size: 29px;
+    font-family: var(--font-bebas);
+    color: #ff1b1b;
+  }
+
+  .opinions-body-person {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+  }
+  .opinions-body-person p {
+    color: #ccc;
+  }
+
+  .title-opinions-date {
+    color: #ccc;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media not screen and (min-width: 441px) and (min-width: 637px) and (min-width: 767px) {
+  .sobre-home {
+    background-image: linear-gradient(
+        6590deg,
+        rgb(0, 0, 0),
+        rgba(0, 0, 0, 0.821),
+        rgba(11, 17, 131, 0)
+      ),
+      url("../../assets/imgs/wallwar.jpg");
+
+    height: auto;
+    padding-bottom: 20px;
+    margin: 0;
+    width: 100%;
+  }
+
+  .sobre-contained {
+    width: auto;
+ 
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+  }
+
+  .sobre-contained h1 {
+    color: #fafafa;
+  }
+
+  .sobre-contained p {
+    color: #ccc;
+  }
+
+  .contained-titles {
+    width: auto;
+    height: auto;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .contained-titles div {
+    padding: 10px;
+    width: auto;
+    border: 1px solid #565656;
+    height: 50%;
+  }
+
+  .contained-titles-down {
+    width: auto;
+    height: auto;
+  }
+
+  .contained-titles-down div {
+    padding: 10px;
+    width: auto;
+    border: 1px solid #565656;
+    height: auto;
+    border-bottom-right-radius: 25px;
+  }
+}
+
+@media not screen and (min-width: 441px) and (min-width: 637px) and (min-width: 767px) {
+  /*  OPINIONS PERSON */
+
+  .opinions {
+    width: auto;
+    height: 1600px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    padding: 10px;
+    background-color: #0d0d0d;
+  }
+
+  .opinions-titles {
+    width: 100%;
+    text-align: right;
+    display: block;
+    padding: 10px;
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+
+  .opinions-titles h4 {
+    font-family: var(--font-bebas);
+    color: #fafafa;
+    text-align: center;
+  }
+
+  .opinions-titles h1 {
+    font-family: var(--font-bebas);
+    font-size: 60px;
+    color: #fafafa;
+    text-align: center;
+  }
+
+  .title-opinions {
+    width: 100%;
+  }
+
+  .title-opinions p {
+    font-size: 17px;
+    color: #fafafa;
+    text-align: center;
+  }
+
+  .button-opinions {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .button-opinions button {
+    background-image: linear-gradient(
+      80deg,
+      var(--colortext),
+      var(--colortext2)
+    );
+    height: 45px;
+    width: 100%;
+    color: #fafafa;
+    font-family: var(--font-noto);
+    border-radius: 58px;
+    border: none;
+    transition: 0.3s ease-in-out;
+  }
+  .button-opinions button:hover {
+    background-image: linear-gradient(
+      80deg,
+      var(--colortext),
+      var(--colortext2)
+    );
+    box-shadow: 2px 3px 20px var(--colortext2);
+    color: #fafafa;
+    font-family: var(--font-noto);
+  }
+
+  .opinions-texts {
+    width: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .opinions-texts-person:nth-child(2) {
+    margin-right: 0px;
+  }
+
+  .opinions-texts-person {
+    width: 300px;
+    height: auto;
+    background-color: #282727;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+
+  .opinions-img {
+    width: 100%;
+    display: flex;
+    height: 30%;
+    align-items: center;
+  }
+
+  .opinions-img-img {
+    width: 20%;
+    margin-right: 15px;
+    border-radius: 50%;
+    padding: 0px 10px 10px 0;
+    background-color: #ff1b1b;
+  }
+
+  .opinions-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .opinions-img-titles h4 {
+    line-height: 2px;
+    font-size: 20px;
+    text-indent: 3px;
+    font-family: var(--font-fira);
+    color: #ccc;
+  }
+  .opinions-img-titles h1 {
+    font-size: 29px;
+    font-family: var(--font-bebas);
+    color: #ff1b1b;
+  }
+
+  .opinions-body-person {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 10px;
+  }
+  .opinions-body-person p {
+    color: #ccc;
+  }
+
+  .title-opinions-date {
+    color: #ccc;
+
+    width: 100%;
+    height: 50px;
+  }
+}
+
+
+@keyframes modal {
+  from{opacity: 0;
+  
+  }
+  to{
+    opacity: 1;
+    }
+}
+
+
+
+
+
+.progresss{
+  height: 500px;
+  background-color: #575757;
+ 
+}
+
+.progress-container {
+  background-color: #3a1f1f;
+  height: 250px;
+  width:500px;
+}
+
+
+
+
+.progress-div {
+  display: flex;
+  justify-content: center;
+  border-radius: .5rem;
+  align-items: center;
+
+}
+
+.progress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  border-radius: 1rem;
+  transition: width .2s ease;
+ 
+  height: 45px;
+  
+  background-color: var(--colortext);
+}
+

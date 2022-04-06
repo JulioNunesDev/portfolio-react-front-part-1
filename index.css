@@ -1,0 +1,54 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+:root{
+--font-bebas: 'Bebas Neue', cursive;
+ --font-fira: 'Fira Sans', sans-serif;
+ --font-noto: 'Noto Sans', sans-serif;
+ --font-popis: 'Poppins', sans-serif;
+ --font-roboto: 'Roboto', sans-serif;
+ --font-saira: 'Saira', sans-serif;
+ --font-sora: 'Sora', sans-serif;
+ --font-vibe: 'Great Vibes', cursive;
+ --font-riva: 'Beau Rivage', cursive;
+
+
+
+
+ --colortext: rgb(115, 0, 255);
+ --backtext: #1e024b;
+ --colortext2: rgb(115, 0, 255);
+ --colortext3: rgb(140, 48, 252);
+ --colorbutton: #e5e5e5;
+
+}
+
+
+
+@keyframes anima {
+   0%{
+      opacity: 0;
+   }
+   100%{
+      opacity: 1;
+   }
+}
+
+body::-webkit-scrollbar {
+   width: 10px;
+   height: 35px;               /* width of the entire scrollbar */
+ }
+ 
+ body::-webkit-scrollbar-track {
+   background: #0d0d0d;        /* color of the tracking area */
+ }
+ 
+ body::-webkit-scrollbar-thumb {
+   background-color: rgb(115, 0, 255);    /* color of the scroll thumb */
+   border-radius: 20px; 
+   
+   /* roundness of the scroll thumb */
+     /* creates padding around scroll thumb */
+ }
