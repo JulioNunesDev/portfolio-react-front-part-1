@@ -15,6 +15,7 @@ export const AppRoutes=()=>{
         <Routes>
             <Route path='/home' element={<Home/>}/>
             <Route path='/profile' element={<Profile/>}/>
+            <Route  path="*" element={<Home/>}/>
            
         </Routes>
         </Box>
