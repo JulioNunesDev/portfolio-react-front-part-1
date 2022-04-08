@@ -20,6 +20,7 @@ import {
 import { useNavigate, NavLink, Link} from "react-router-dom";
 
 import { useAppThemeContext } from "../contexts/ThemeContext";
+import { Nota } from './Nota';
 
 
 
@@ -179,6 +180,7 @@ export const AppBarTopo = () => {
           </ListItemButton>
         </Box>
       </Box>
+      <Nota/>
     </Box>
   );
 };

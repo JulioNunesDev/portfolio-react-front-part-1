@@ -97,6 +97,9 @@ flex-wrap: wrap;
 }
 
 
+
+
+
 .button-down{
  
     z-index: 100;
@@ -131,6 +134,11 @@ flex-wrap: wrap;
   background-color: transparent;
 
 }
+
+.titulo-button a{
+    background-color: transparent;
+}
+
 
 
 
@@ -291,6 +299,8 @@ flex-wrap: wrap;
             padding: 10px;
             flex-wrap: wrap;
         }
+
+       
         
         .titulo-button button{
             width: 120px;
@@ -301,10 +311,8 @@ flex-wrap: wrap;
             outline: none;
             font-weight: bold;
             font-size: 19px;
-           
-           
         }
-
+    
        
         
         

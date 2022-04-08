@@ -51,8 +51,8 @@ function App() {
       {anima  ?(
         <div style={{margin: 0, width: '100%', height: '100%'}}>
 
-        <AppBarTopo>
-        </AppBarTopo>
+        
+   
         <AppRoutes/>
         </div>  
 
@@ -68,7 +68,7 @@ function App() {
 
         <h1 
          style={{fontFamily: 'var(--font-sora)', textAlign: 'center', fontSize: '50px',marginTop: '35px', wordBreak: 'break-word', animation: 'anima 3s backwards   ease-in .3s ',  color: 'var(--colortext)'}}
-         >Desenvolvido by Julio</h1>
+         >Em desenvolvimento by Julio</h1>
           <h1
          style={{fontFamily: 'var(--font-sora)', textAlign: 'center', fontSize: '50px',marginTop: '5px', animation: 'anima 2s backwards   ease-in .3s',
          color: 'var(--colortext)'

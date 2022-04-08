@@ -35,6 +35,13 @@
       opacity: 1;
    }
 }
+::selection{
+
+   background-color: var(--colortext);
+   color: #fff;
+}
+body::selection{
+}
 
 body::-webkit-scrollbar {
    width: 10px;

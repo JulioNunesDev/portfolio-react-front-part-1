@@ -71,14 +71,14 @@
 }
 .main-container-player-title h3{
     font-family: var(--font-sora);
-    color: #b3b3b3;
-    font-size: 28px;
+    color: #5b5b5b;
+    font-size: 29px;
     word-wrap: break-word;
     word-break: break-all;
 }
 .main-container-player-title p{
     font-family: var(--font-sora);
-    color: #b3b3b3;
+    color: #5b5b5b;
     font-size: 23px;
     word-wrap: break-word;
     word-break: break-all;
@@ -161,10 +161,11 @@
 }
 
 .main-container-projects{
-  
-    height: auto;
+      height: auto;
     width: auto;
     position: relative;
+    transition: all .5s ease-in-out;
+    
 
 }
 
@@ -206,8 +207,8 @@
 .container-projects-atually{
 position: relative;
     width: 100%;
-    height:900px;
-
+    height:auto;
+   
     display: flex;
     justify-content: center;
     align-items: center;
@@ -215,17 +216,120 @@ position: relative;
 
 }
 
-.container-projects-atually div{
+.container-contador-projetos{
+    background-color: #000000;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: 150px;
+   text-align: center;
+    justify-content: center;
+    font-family: var(--font-sora);
+    color: #fff;
+ 
+    animation:  modalDiv .1s ease-in-out;
+}
+.container-contador-projetos h1{
+  text-align: center;
+}
+
+.container-contador-projetos:nth-child(1){
+    text-align: left !important;
+    padding-left: 25px;
+   
+}
+
+.container-projects-atually button {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.projetos-novos{
+    background-color: #111;
+    border-radius: 3px;
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.295);
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    animation: modalDiv 1s ease-in-out;
+}
+
+
+
+ .netflix{
+    width: 325px;
+    height: 425px;
+    position: relative;
+    border-radius: 3px;
+    opacity: 0.7;
+    display: flex;
+    margin: 15px;
+}
+
+.netflix:hover{
+    box-shadow: 2px 2px 10px 5px rgba(255, 255, 255, 0.295);
+    border-radius: 3px;
+    opacity: 1;
+}
+
+.netflix img{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    border-radius: 3px;
+    object-fit: cover;
+}
+
+
+.netflix div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: #151515c5;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    opacity: 0;
+    transition: all .5s ease-in-out;
 }
 
-.container-projects-atually div h1{
-    font-size: 45px;
-    font-family: var(--font-sora);
+.netflix:hover div{
+    transition: all .5s ease-in-out;
+    opacity: 1;
+}
 
+.netflix div h1{
+    font-family: var(--font-sora);
+    font-weight: bold;
+    color: #fff;
+}
+.netflix div span {
+    color: #00ff00;
+    text-decoration: underline;
+   padding: 0;
+   margin: 0;
+   border: 0;
+}
+.netflix p{
+    font-family: var(--font-sora);
+    color: #fff;
+}
+
+.netflix div a{
+    transition: all .3s;
+    background-color: #3c3c3c;
+    border: 0;
+    color: #fff;
+}
+
+.netflix div a:hover{
+    background-color: var(--colortext);
 }
 
 
@@ -273,7 +377,7 @@ position: relative;
     font-family: var(--font-sora);
     font-weight: bold;
     padding: 10px;
-    transition: .2s ease-in;
+    transition: all .2s ease-in;
     color: #000000;
     border-radius: 1px;
     box-shadow: 1px 1px 3px rgba(54, 54, 54, 0.906);
@@ -340,6 +444,7 @@ position: relative;
 
 .main-container-header-titulo p{
     font-size: 20px;
+    color: #5b5b5b;
     font-family: var(--font-sora);
 }
 
@@ -520,7 +625,23 @@ footer {
   .footer-name h2 {
     font-size: 22px;
   }
-  
+
+  .modal-name{
+    background-color: rgba(0,0,0,0.9);
+    width: 100%;
+    z-index: 980;
+    position: fixed;
+   
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+ 
+    align-items: center;
+    justify-content: center;
+  }
+
 
 
 @media not screen and  (min-width: 1024px ){
@@ -610,7 +731,7 @@ footer {
 
 .main-container-player-play div{
     width:100%;
-   
+  
     height: 330px;
     flex-wrap: wrap;
     display: flex;
@@ -631,6 +752,10 @@ footer {
 .main-container-player-play div span:hover{
     transform: scale(1.1);
 }
+
+
+
+
 
 .main-container-form form {
     width: 100%;

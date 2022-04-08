@@ -28,7 +28,7 @@ import {
   KeyboardDoubleArrowUp,
   LinkedIn,
 } from "@mui/icons-material";
-
+import {Link as Linkado} from 'react-router-dom'
 import { Link } from "react-scroll";
 import { useState } from "react";
 
@@ -136,32 +136,32 @@ export const Home = () => {
         >
           <div className="contained-titles">
             <div>
-              <h1>Stephen Hawking, físico teórico</h1>
               <p>
                 “Acho que vírus de computador deve contar como vida. Creio que
                 dizem algo sobre a natureza humana que a única forma de vida que
                 criamos até agora é puramente destrutiva. Nós criamos vida à
                 nossa própria imagem.”
               </p>
+              <h1>| Stephen Hawking,<br/> físico teórico</h1>
             </div>
             <div>
-              <h1>Morale Linus Torvalds, Linux.</h1>
               <p>
                 “Estou fazendo um sistema operacional gratuito (apenas um hobby,
                 não será grande e profissional como GNU) para 386/486 AT.”
               </p>
+              <h1>| Morale Linus Torvalds,<br/>Criador do Linux.</h1>
             </div>
           </div>
 
           <div className="contained-titles-down">
             <div>
-              <h1>Steve Jobs.</h1>
               <p>
                 “Algumas pessoas acham que foco significa dizer sim para a coisa
                 em que você vai se focar. Mas não é nada disso. Significa dizer
                 não às centenas de outras boas ideias que existem. Você precisa
                 selecionar cuidadosamente.”
               </p>
+              <h1>| Steve Jobs.</h1>
             </div>
           </div>
         </div>
@@ -193,7 +193,7 @@ export const Home = () => {
               </p>
             </div>
             <div className="button-opinions">
-              <button>Mais Opiniões</button>
+              <Linkado to="/opinios">Mais Opiniões</Linkado>
             </div>
           </div>
 

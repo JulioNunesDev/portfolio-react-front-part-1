@@ -14,40 +14,100 @@ import boot from '../../assets/imgs/bootstrap.png'
 import git from '../../assets/imgs/git.svg'
 import node from '../../assets/imgs/donde.png'
 import material from '../../assets/imgs/material.png'
-import styled from '../../assets/imgs/styled.png'
-import load from '../../assets/imgs/spinning-circles.svg'
+import stylede from '../../assets/imgs/styled.png'
+import netflix from '../../assets/imgs/ddd.png'
 import { Link } from "react-scroll";
-import { useEffect, useRef, useState } from "react"
+import {useState } from "react"
+import styled, {keyframes} from 'styled-components'
 
 
+
+
+
+    export const animal = keyframes`
+        0%{opacity: 0};
+        100%{opacity: 1}
+    `
+
+    const ModalPlayerDiv = styled.div`
+    
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #111;
+    animation: ${animal} .5s alternate;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+    
+
+    button{
+        margin-bottom: 15px;
+        
+        height: 35px;
+        width: 120px;
+        border: 0;
+        font-family: var(--font-sora);
+        font-size: 16px;
+        font-weight: bold;
+        background-color: ${props => props.back};
+        color: ${props => props.colorss};
+        border-radius: 2px ;
+        transition: all 0.3s ease;
+
+        &:hover{
+            background-color: #2b2b2b;
+            color: ${props => props.hover};
+        }
+        
+    }
+
+
+    iframe {
+        display: flex;
+        justify-content: center;
+        
+        background-color: #383838;
+    }
+
+    `
+   
+ 
+    
 
 
 
 export const Profile =()=>{
 
     const theme = useTheme()
+    const [modalPlayer, setModalPlayer]=useState(false)
+    const [text,setText]=useState('')
+    const [divMain,setDivMain]=useState(false)
 
-    const [divMain,setDivMain]=useState(true)
 
     const exibirConteudo =() =>{
         setDivMain(newDiv => !newDiv)
     }
-
-    
-
-    const [text,setText]=useState('')
-
-    
     const  valorText =(e)=>{
-        
-           setText(e.target.value)
-         
+           setText(e.target.value)   
     }
 
+    const modalPlayerButton=(e)=>{
+        setModalPlayer(!modalPlayer)
+        if(!modalPlayer){
+        window.alert('Vídeo exemplo!')
+        }
+    }
+
+   
 
 
     return(
+        
         <Box 
+
          width='100%' height='100%'
         maxWidth='1280px'
         position='relative'
@@ -58,6 +118,35 @@ export const Profile =()=>{
         bgcolor={theme.palette.background.paper}
         color={theme.palette.text.primary}
    >
+
+
+
+            {modalPlayer && 
+                 <div
+                  className="modal-name" 
+                               
+                 >
+
+                   
+                    <ModalPlayerDiv 
+                    hover={theme.palette.mode == 'dark'
+                    ? '#fff' : ''
+                    }
+                    back={theme.palette.mode == 'dark'
+                     ? '#fffffffd' : '#1f1f1f' }
+                    colorss={theme.palette.mode == 'dark' 
+                    ? '#1f1f1f' : '#fffffffd'}>
+                   <button
+                    onClick={(e)=>modalPlayerButton(e)}>X Fechar</button>
+                   <iframe width="560" height="315" src="https://www.youtube.com/embed/jpsS5EYN-Wc?start=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen='true'></iframe>
+                      <h3> Video Exemplo!!</h3>
+                  
+                    </ModalPlayerDiv>
+                  
+                   
+
+                 </div>
+                }
 
         <div id="#topos"
          className="main-container"
@@ -87,14 +176,18 @@ export const Profile =()=>{
                 <h3>Nesse vídeo falo um pouco de como é estudar programação!</h3>
                 <p>Ainda tenho muito que aprender e me aperfeiçoar.</p>
                 </div>
-            </div>
+              </div>
+            
             <div className="main-container-player-play"
              data-aos="fade-up"
              data-aos-duration="3000">
+
                 <div>
-                    <span><PlayArrow sx={{color:'var(--colortext)', fontSize:100}}/></span>
+                    <span onClick={modalPlayerButton}><PlayArrow sx={{color:'var(--colortext)', fontSize:100}}/></span>
                 </div>
+                
             </div>
+           
         </div>
 
 
@@ -116,7 +209,8 @@ export const Profile =()=>{
                 data-aos="fade-up"
                 data-aos-duration="2900"
                 >
-                <img src={html} alt="html" />
+                <img src={html} alt="html"
+                />
                 <img src={css} alt="css" />
                 <img src={js} alt="javascript" />
                 <img src={boot} alt="BootStrap" />
@@ -127,7 +221,7 @@ export const Profile =()=>{
                 >
               
                 <img src={react} alt="react" />
-                <img src={styled} alt="Material" />
+                <img src={stylede} alt="Material" />
                 <img src={types} alt="typescript" />
                 <img src={material} alt="Material" />
                 </div>
@@ -145,7 +239,7 @@ export const Profile =()=>{
                   
             </div>
         </div>
-        {!divMain ? (
+        {divMain ? (
         <div
          className="main-container-projects">
             <div className="container-header">
@@ -156,14 +250,47 @@ export const Profile =()=>{
              ><h1>PROJETOS</h1></div>
             </div>
             <div className="container-projects-atually">
-                    <div>
-                        <h1>Projetos em Breve...</h1>
-                        <h3>Construindo o Back-End</h3>
-                            <img src={load} alt="Loading" />
-                            <button className="btn_state-btn" onClick={exibirConteudo}>{!divMain ? 'Esconder Conteúdo' : 'Exibir Conteúdo'}</button>
+                <div className="container-contador-projetos">
+                    <h1>Contador dinâmico</h1>
+                    <h2>Projetos Total: 16</h2>
+                </div>
+                    <div className="projetos-novos">
+
+                        <div className="netflix">
+                            <img src={netflix} alt="projeto_netflix" />
+                            <div>
+                            <h1>Clone Netflix</h1>
+                            <p>Projeto criado recentemente <br/> futuras implementações</p>
+                            <a href="https://netflixjulionunes.netlify.app/" target='_blank'>Preview</a>
+                            </div>
+                        </div>
+
+                        <div className="netflix">
+                            <img src='https://www.gov.br/mre/pt-br/assuntos/portal-consular/alertas%20e%20noticias/alertas/entrada-de-brasileiros-e-estrangeiros-no-brasil/brasilportaria658.jpg' alt="projeto_redeSocial" />
+                            <div>
+                            <h1>Social <span style={{backgroundColor: '00ff00' }}>Brazil</span></h1>
+                            <p>Projeto em construção <br/> faça parte você também!</p>
+                            <a href="" target='_blank'>Veja mais..</a>
+                            </div>
+                        </div>
+
+
+                        <div className="netflix">
+                            <img src='https://www.folhadelondrina.com.br/img/inline/3180000/0x1200/Arena-Games-e-diferencial-da-60-ExpoLondrina0318353101202204051925.webp?fallback=https%3A%2F%2Fwww.folhadelondrina.com.br%2Fimg%2Finline%2F3180000%2FArena-Games-e-diferencial-da-60-ExpoLondrina0318353101202204051925.jpg%3Fxid%3D5734306&xid=5734306' alt="projeto_netflix" />
+                            <div>
+                            <h1>Em breve</h1>
+                            <p>Projeto em breve <br/> voltado a Game
+                            </p>
+                            <a href="" target='_blank'>Preview</a>
+                            </div>
+                        </div>
+
                     </div>
+                            <button className="btn_state-btn" onClick={exibirConteudo}>{!divMain ? 'Esconder Conteúdo' : 'Exibir Conteúdo'}</button>
             </div>
         </div>
+
+
         ): (<div style={{animation: 'modalDiv  .7s ease-in-out'}} className="btn_state">
             <button  onClick={exibirConteudo}>Exibir Conteúdo</button>
         </div>)}
