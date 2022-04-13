@@ -162,10 +162,8 @@ export const Sugestoes = () => {
 
     useEffect(()=>{
        Api.get('').then((res)=>{
-           const date = res.data
-           console.log(date)
+           const date = res.data   
            setOpiniosDate(date)
-           console.log(opiniosDate)
        })
     },[])
     
