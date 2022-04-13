@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import styled from "styled-components";
 import { Api } from "../../services/Api";
+import {useAxios} from '../hooks/useAxios'
 
 
 
@@ -100,7 +101,7 @@ div{
         width: 100%;
         height: auto;
         padding: 10px;
-        justify-content: space-around;
+        justify-content: space-evenly;
         flex-wrap: wrap;
 
         .opinions{
@@ -157,16 +158,16 @@ export const Sugestoes = () => {
     const [urlImg, setUrlImg]=useState('')
     const [name, setName]=useState('')
     const [message, setMessage]=useState('')
-    const [opiniosDate, setOpiniosDate]= useState([])
+  
 
 
-    useEffect(()=>{
-       Api.get('').then((res)=>{
-           const date = res.data   
-           setOpiniosDate(date)
-       })
-    },[])
     
+    
+    
+    const {data, mutate}=useAxios('/')
+
+
+
     const enviarDados =()=>{
         if(urlImg == "") return alert('coloque uma url de uma imagem!')
         if(name == "") return alert('coloque um nome!')
@@ -174,19 +175,19 @@ export const Sugestoes = () => {
 
        
 
-        Api.post('opinios',{
+        Api.post('/opinios',{
             urlImg: urlImg,
             name: name,
             message: message
         })
-        setMessage('')
-        setName('')
-        setUrlImg('')
-        alert(`Muito obrigado!, por sua opinião, \n 
-            Alert: Nao apareceu sua Opinião??, aperte F5.
-        `)
+       
 
-        
+        const updateAdd = [...data, urlImg, name, message ]
+
+          mutate(updateAdd, false)
+
+        alert('Obrigado por sua Opinião!!')
+       
         
     }
 
@@ -223,12 +224,19 @@ export const Sugestoes = () => {
                     maxLength='150' placeholder="Sua mensagem*" onChange={(e)=>setMessage(e.target.value)}
                     ></textarea>
                 </div><br/>
-             
-                    <Button variant="contained" onClick={enviarDados}
-                    
+          
+                 
+                    <Button variant="contained" onClick={enviarDados} style={{marginBottom:15}}
+
                     >
                         Enviar
                     </Button>
+                    <Button type="reset" variant="contained" 
+                    >
+                       Reset
+                    </Button>
+             
+                    
                  </Stylos>
                  <OpinionsRead>
               <div >
@@ -236,7 +244,7 @@ export const Sugestoes = () => {
                     </div>
 
                     <div className="content">
-                        {opiniosDate?.map((opinio)=>(
+                        {data?.map((opinio)=>(
                         <div className="opinions">
                             <div className="img">
                             <img src={opinio.urlImg} alt="imagem usuario" />
