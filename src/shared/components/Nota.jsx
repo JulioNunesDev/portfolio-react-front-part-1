@@ -83,7 +83,7 @@ export const Nota = () => {
       const timeIn =  setInterval(()=>{
         setNota(true)
         
-        }, 20000)
+        }, 30000)
 
         if(contador == valor){
             setNota(false)

@@ -406,7 +406,7 @@ export const Home = () => {
          <a href='https://www.instagram.com/julionunesyt' target='_blank'>
          <Instagram sx={{fontSize: 45, color: theme.palette.background.paper}}/>
          </a>
-         <a href='https://www.linkedin.com/in/julio-nunes-de-oliveira-b6b40721a/' target='_blank'>
+         <a href='https://www.linkedin.com/in/julio-nunes-b6b40721a' target='_blank'>
           <LinkedIn  sx={{fontSize: 45, color: theme.palette.background.paper}}/>
          </a>
          <a href='https://github.com/JulioNunesDev' target='_blank'>
