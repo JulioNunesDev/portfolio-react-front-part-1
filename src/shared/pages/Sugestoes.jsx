@@ -179,6 +179,7 @@ export const Sugestoes = () => {
             urlImg: urlImg,
             name: name,
             message: message
+
         })
        
 
@@ -216,7 +217,7 @@ export const Sugestoes = () => {
 
              <div>
                     <input type="text" id="nome" name='nome'
-                    placeholder="Url da sua Imagem*" onChange={(e)=>setUrlImg(e.target.value)}  />
+                    placeholder="Url da sua Imagem*" onChange={(e)=>setUrlImg(e.target.value)} disabled />
                 </div>
                 <div>
                     
