@@ -99,7 +99,7 @@ export const AppBarTopo = () => {
                 }}
               >
                 <NavLink 
-                 exact to='/home' activeClassName='selected'>
+                 exact to='/' activeClassName='selected'>
 
                 
                   <Icon  sx={{ marginRight: 1, fontSize:35}}>home</Icon>

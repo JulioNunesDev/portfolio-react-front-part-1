@@ -17,9 +17,10 @@ export const AppRoutes=()=>{
         
         <AppBarTopo/>
         <Routes>
-            <Route path='/home' element={<Home/>}/>
+            <Route path='/' element={<Home/>}/>
             <Route path='/profile' element={<Profile/>}/>
-            <Route path='/opinios' element={<Sugestoes/>}/>
+            <Route path='/opinio' element={<Sugestoes/>}/>
+            <Route path='*' element={<Home/>}/>
             
 
            

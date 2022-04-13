@@ -193,7 +193,7 @@ export const Home = () => {
               </p>
             </div>
             <div className="button-opinions">
-              <Linkado to="/opinios">Mais Opiniões</Linkado>
+              <Linkado to="/opinio">Mais Opiniões</Linkado>
             </div>
           </div>
 
