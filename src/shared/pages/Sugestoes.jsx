@@ -185,12 +185,18 @@ export const Sugestoes = () => {
         const updateAdd = [...data, urlImg, name, message ]
 
           mutate(updateAdd, false)
-
+          
+          limparHandle()
         alert('Obrigado por sua Opinião!!')
        
         
     }
 
+    const limparHandle=()=>{
+        setName('')
+        setUrlImg('')
+        setMessage('')
+    }
 
     return ( 
         
