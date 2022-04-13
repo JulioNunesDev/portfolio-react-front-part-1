@@ -268,9 +268,9 @@ export const Profile =()=>{
                         <div className="netflix">
                             <img src='https://www.gov.br/mre/pt-br/assuntos/portal-consular/alertas%20e%20noticias/alertas/entrada-de-brasileiros-e-estrangeiros-no-brasil/brasilportaria658.jpg' alt="projeto_redeSocial" />
                             <div>
-                            <h1>Social <span style={{backgroundColor: '00ff00' }}>Brazil</span></h1>
+                            <h1>Social <span style={{backgroundColor: '00ff00' }}>Vintra</span></h1>
                             <p>Projeto em construção <br/> faça parte você também!</p>
-                            <a href="" target='_blank'>Veja mais..</a>
+                            <a href="https://discord.gg/SKu2pt7S" target='_blank'>Veja mais..</a>
                             </div>
                         </div>
 
@@ -286,7 +286,7 @@ export const Profile =()=>{
                         </div>
 
                     </div>
-                            <button className="btn_state-btn" onClick={exibirConteudo}>{!divMain ? 'Esconder Conteúdo' : 'Exibir Conteúdo'}</button>
+                            <button className="btn_state-btn" onClick={exibirConteudo}>{divMain ? 'Esconder Conteúdo' : ''}</button>
             </div>
         </div>
 
@@ -341,7 +341,7 @@ export const Profile =()=>{
                
                 </div>
                 <div className="submit-form">
-                    <button>Submit</button>
+                    <button disabled>Desativado</button>
                 </div>
             </form>
        
