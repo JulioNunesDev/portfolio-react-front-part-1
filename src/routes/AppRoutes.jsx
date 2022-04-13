@@ -20,7 +20,9 @@ export const AppRoutes=()=>{
             <Route path='/home' element={<Home/>}/>
             <Route path='/profile' element={<Profile/>}/>
             <Route path='/opinios' element={<Sugestoes/>}/>
+            <Route  path="/" element={<Home/>}/>
             <Route  path="*" element={<Home/>}/>
+
            
         </Routes>
         </Box>
