@@ -27,7 +27,7 @@ function App() {
 
   const step = 1
   const interval = 54
-  const maxProgress = 50
+  const maxProgress = 75
 
   const [progressPercentage, setProgressPercentage] = useState(0);
 

@@ -84,7 +84,7 @@ export const Profile =()=>{
     const theme = useTheme()
     const [modalPlayer, setModalPlayer]=useState(false)
     const [text,setText]=useState('')
-    const [divMain,setDivMain]=useState(false)
+    const [divMain,setDivMain]=useState(true)
 
 
     const exibirConteudo =() =>{
@@ -252,7 +252,7 @@ export const Profile =()=>{
             <div className="container-projects-atually">
                 <div className="container-contador-projetos">
                     <h1>Contador dinâmico</h1>
-                    <h2>Projetos Total: 16</h2>
+                    <h2>Projetos Total: 34</h2>
                 </div>
                     <div className="projetos-novos">
 
@@ -266,22 +266,22 @@ export const Profile =()=>{
                         </div>
 
                         <div className="netflix">
-                            <img src='https://www.gov.br/mre/pt-br/assuntos/portal-consular/alertas%20e%20noticias/alertas/entrada-de-brasileiros-e-estrangeiros-no-brasil/brasilportaria658.jpg' alt="projeto_redeSocial" />
+                            <img src='https://cdn.discordapp.com/attachments/945491578410119180/982001245394968646/Captura_de_tela_2022-06-02_162137.png' alt="projeto_redeSocial" />
                             <div>
-                            <h1>Social <span style={{backgroundColor: '00ff00' }}>Vintra</span></h1>
-                            <p>Projeto em construção <br/> faça parte você também!</p>
-                            <a href="https://discord.gg/SKu2pt7S" target='_blank'>Veja mais..</a>
+                            <h1>Poker <span >NextJj</span></h1>
+                            <p>Projeto em NextJs <br/> faça parte você também!</p>
+                            <a href="https://poker-next-next-59e8e8ahi-julionunesdev.vercel.app/" target='_blank'>Veja mais..</a>
                             </div>
                         </div>
 
 
                         <div className="netflix">
-                            <img src='https://www.folhadelondrina.com.br/img/inline/3180000/0x1200/Arena-Games-e-diferencial-da-60-ExpoLondrina0318353101202204051925.webp?fallback=https%3A%2F%2Fwww.folhadelondrina.com.br%2Fimg%2Finline%2F3180000%2FArena-Games-e-diferencial-da-60-ExpoLondrina0318353101202204051925.jpg%3Fxid%3D5734306&xid=5734306' alt="projeto_netflix" />
+                            <img src='https://cdn.discordapp.com/attachments/945491578410119180/982002725237694505/Captura_de_tela_2022-06-02_162802.png' alt="projeto_netflix" />
                             <div>
-                            <h1>Em breve</h1>
-                            <p>Projeto em breve <br/> voltado a Game
+                            <h1>MetaMask</h1>
+                            <p>Projeto em Blockchain <br/> MetaMask Connect
                             </p>
-                            <a href="" target='_blank'>Preview</a>
+                            <a href="https://dapp-counter-meta-mask-8hlmu27ae-julionunesdev.vercel.app/" target='_blank'>Preview</a>
                             </div>
                         </div>
 
